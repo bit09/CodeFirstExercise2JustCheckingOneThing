@@ -32,7 +32,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,11 +49,55 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppContext.cs" />
+    <Compile Include="EntityConfigurations\LecturersConfiguration.cs" />
+    <Compile Include="EntityConfigurations\SubjectsConfiguration.cs" />
+    <Compile Include="Migrations\201809280729320_InitialModel.cs" />
+    <Compile Include="Migrations\201809280729320_InitialModel.Designer.cs">
+      <DependentUpon>201809280729320_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809280834296_InitialModel1.cs" />
+    <Compile Include="Migrations\201809280834296_InitialModel1.Designer.cs">
+      <DependentUpon>201809280834296_InitialModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809280837088_InitialModel2.cs" />
+    <Compile Include="Migrations\201809280837088_InitialModel2.Designer.cs">
+      <DependentUpon>201809280837088_InitialModel2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809280847333_InitialModel3.cs" />
+    <Compile Include="Migrations\201809280847333_InitialModel3.Designer.cs">
+      <DependentUpon>201809280847333_InitialModel3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809280853593_InitialModel4.cs" />
+    <Compile Include="Migrations\201809280853593_InitialModel4.Designer.cs">
+      <DependentUpon>201809280853593_InitialModel4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Lecturer.cs" />
+    <Compile Include="Models\Subject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201809280729320_InitialModel.resx">
+      <DependentUpon>201809280729320_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809280834296_InitialModel1.resx">
+      <DependentUpon>201809280834296_InitialModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809280837088_InitialModel2.resx">
+      <DependentUpon>201809280837088_InitialModel2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809280847333_InitialModel3.resx">
+      <DependentUpon>201809280847333_InitialModel3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809280853593_InitialModel4.resx">
+      <DependentUpon>201809280853593_InitialModel4.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
